@@ -1,0 +1,6 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${project.author}
+main: ${project.mainclass}
+commands:

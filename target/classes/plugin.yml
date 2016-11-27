@@ -1,0 +1,6 @@
+name: RMCS-API
+version: 1.0.0.1
+description: RMCS-based API for third-party developers
+author: 0xC0deBabe
+main: ru.luvas.rmcs.api.RMCSAPI
+commands:
