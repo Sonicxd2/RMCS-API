@@ -13,6 +13,7 @@ ru/luvas/rmcs/api/party/PartyReceptionRunnable.class
 ru/luvas/rmcs/api/player/RMCSPlayerManager.class
 ru/luvas/rmcs/api/BarAPI.class
 ru/luvas/rmcs/api/ApiNotLoadedException.class
+ru/luvas/rmcs/api/BungeeAPI.class
 ru/luvas/rmcs/api/inventory/DynamicItem.class
 ru/luvas/rmcs/api/inventory/ClickAction.class
 ru/luvas/rmcs/api/QueueAPI.class

@@ -33,6 +33,8 @@ public class RMCSAPI extends JavaPlugin {
     
     private static SqlManager sqlManager;
     
+    private static BungeeAPI bungeeAPI;
+    
     /**
      * Проверка, инициализировано ли API.
      * @return true, если API загружено, и его можно использовать.
@@ -133,6 +135,18 @@ public class RMCSAPI extends JavaPlugin {
         if(!isLoaded())
             throw new ApiNotLoadedException();
         return sqlManager;
+    }
+    
+    /**
+     * Получение BungeeAPI, с помощью которого можно узнать bungee-информацию
+     * о данном сервере, о лобби-сервере данного режима, а также перебросить
+     * игроков с данного сервера в лобби.
+     * @return реализацию класса BungeeAPI.
+     */
+    public static BungeeAPI getBungeeAPI() {
+        if(!isLoaded())
+            throw new ApiNotLoadedException();
+        return bungeeAPI;
     }
     
 }
