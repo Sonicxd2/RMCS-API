@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 /**
  *
- * @author 0xC0deBabe <iam@kostya.sexy>
+ * @author 0xC0deBabe
  */
 public interface BungeeAPI {
 

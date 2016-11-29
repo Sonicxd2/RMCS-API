@@ -71,6 +71,18 @@ public interface BarAPI {
     public void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
 
     /**
+     * Отправить конкретному игроку прогресс-бар с заданным прогрессом и заданной ширины.
+     * @param p игрок.
+     * @param text текст прогресс-бара.
+     * @param r красная составляющая цвета.
+     * @param g зеленая составляющая цвета.
+     * @param b синяя составляющая цвета.
+     * @param progress заполненность прогресс-бара в долях (от 0 до 1).
+     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     */
+    public void send(Player p, String text, int r, int g, int b, float progress, float width);
+
+    /**
      * Отправить конкретному игроку прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
      * но полная заполненность которого будет соответствовать seconds секундам времени, заданной ширины.
      * @param p игрок.
@@ -142,6 +154,18 @@ public interface BarAPI {
     public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
 
     /**
+     * Отправить всем игрокам заданной коллекции прогресс-бар с заданным прогрессом и заданной ширины.
+     * @param players игроки.
+     * @param text текст прогресс-бара.
+     * @param r красная составляющая цвета.
+     * @param g зеленая составляющая цвета.
+     * @param b синяя составляющая цвета.
+     * @param progress заполненность прогресс-бара в долях (от 0 до 1).
+     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     */
+    public void send(Collection<Player> players, String text, int r, int g, int b, float progress, float width);
+
+    /**
      * Отправить всем игрокам заданной коллекции прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
      * но полная заполненность которого будет соответствовать seconds секундам времени, заданной ширины.
      * @param players игроки.
@@ -206,6 +230,17 @@ public interface BarAPI {
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      */
     public void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
+
+    /**
+     * Отправить всем игрокам прогресс-бар с заданным прогрессом и заданной ширины.
+     * @param text текст прогресс-бара.
+     * @param r красная составляющая цвета.
+     * @param g зеленая составляющая цвета.
+     * @param b синяя составляющая цвета.
+     * @param progress заполненность прогресс-бара в долях (от 0 до 1).
+     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     */
+    public void broadcast(String text, int r, int g, int b, float progress, float width);
 
     /**
      * Отправить всем игрокам прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
