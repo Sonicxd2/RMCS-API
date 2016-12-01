@@ -41,7 +41,7 @@ public interface BarAPI {
      * @param r красная составляющая цвета.
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Player p, String text, int r, int g, int b, float width);
 
@@ -53,7 +53,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Player p, String text, int r, int g, int b, int seconds, float width);
 
@@ -80,7 +80,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param progress заполненность прогресс-бара в долях (от 0 до 1).
-     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
     public void send(Player p, String text, int r, int g, int b, float progress, float width);
@@ -95,7 +95,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 
@@ -127,7 +127,7 @@ public interface BarAPI {
      * @param r красная составляющая цвета.
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Collection<Player> players, String text, int r, int g, int b, float width);
 
@@ -139,7 +139,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, float width);
 
@@ -166,7 +166,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param progress заполненность прогресс-бара в долях (от 0 до 1).
-     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
     public void send(Collection<Player> players, String text, int r, int g, int b, float progress, float width);
@@ -181,7 +181,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 
@@ -210,7 +210,7 @@ public interface BarAPI {
      * @param r красная составляющая цвета.
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void broadcast(String text, int r, int g, int b, float width);
 
@@ -221,7 +221,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void broadcast(String text, int r, int g, int b, int seconds, float width);
 
@@ -246,7 +246,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      * @param progress заполненность прогресс-бара в долях (от 0 до 1).
-     * @param width ширина прогресс-бара (базовое значение - DEFAULT_WIDTH).
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
     public void broadcast(String text, int r, int g, int b, float progress, float width);
@@ -260,7 +260,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
-     * @param width ширина прогресс-бара.
+     * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     public void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 

@@ -75,28 +75,70 @@ public interface RMCSPlayer {
     public boolean isVipPlus();
     
     /**
-     * Проверка на то, является ли игрок ричем (или выше).
+     * Проверка на то, является ли игрок спонсором (или выше).
      * @return true, если игрок RICH или выше.
      */
     public boolean isRich();
     
     /**
-     * Проверка на то, является ли игрок тестером (или выше).
-     * @return true, если игрок QA или выше.
+     * Проверка на то, является ли игрок ютубером (или выше).
+     * @return true, если игрок YOUTUBE или выше.
      */
-    public boolean isQA();
+    public boolean isYoutuber();
     
     /**
-     * Проверка на то, является ли игрок хелпером (или выше).
-     * @return true, если игрок Helper или выше.
+     * Проверка на то, является ли игрок ютубером+ (или выше).
+     * @return true, если игрок YOUTUBE+ или выше.
+     */
+    public boolean isYoutuberPlus();
+    
+    /**
+     * Проверка на то, является ли игрок ютубером++ (или выше).
+     * @return true, если игрок YOUTUBE++ или выше.
+     */
+    public boolean isYoutuberPlusPlus();
+    
+    /**
+     * Проверка на то, является ли игрок тестером (или выше).
+     * @return true, если игрок Tester или выше.
+     */
+    public boolean isTester();
+    
+    /**
+     * Делает то же, что и isJuniorModerator()
+     * @return то же, что и isJuniorModerator()
      */
     public boolean isHelper();
+    
+    /**
+     * Делает то же, что и isJuniorModerator()
+     * @return то же, что и isJuniorModerator()
+     */
+    public boolean isJrModerator();
+    
+    /**
+     * Проверка на то, является ли игрок младшим модератором (или выше).
+     * @return true, если игрок младший модератор или выше.
+     */
+    public boolean isJuniorModerator();
     
     /**
      * Проверка на то, является ли игрок модератором (или выше).
      * @return true, если игрок Moderator или выше.
      */
     public boolean isModerator();
+    
+    /**
+     * Делает то же, что и isSeniorModerator()
+     * @return то же, что и isSeniorModerator()
+     */
+    public boolean isSrModerator();
+    
+    /**
+     * Проверка на то, является ли игрок старшим модератором (или выше).
+     * @return true, если игрок старший модератор или выше.
+     */
+    public boolean isSeniorModerator();
     
     /**
      * Проверка на то, является ли игрок администратором (или выше).
@@ -109,5 +151,101 @@ public interface RMCSPlayer {
      * @return модификатор получения серебра.
      */
     public float getCoinsMultiplier();
+    
+    /**
+     * Получение количества золота у игрока.
+     * @return количество золота игрока.
+     */
+    public int getGold();
+    
+    /**
+     * Получение межсерверного уровня игрока.
+     * @return межсерверный уровень игрока.
+     */
+    public int getLevel();
+    
+    /**
+     * Получение межсерверного опыта игрока.
+     * @return межсерверный опыт игрока.
+     */
+    public int getExperience();
+    
+    /**
+     * Получение названия гильдии игрока.
+     * @return null, если игрок не в гильдии; иначе название гильдии.
+     */
+    public String getGuildName();
+    
+    
+    
+    /* SECURED SECTION *\
+    
+        Все методы ниже требуют особых разрешений у вашего плагина, которые
+        обычно отсутствуют на тестовых серверах, но, в случае необходимости,
+        выдаются на продакшн-серверах.
+    
+    */
+    
+    /**
+     * Выдает случайный сундук игроку.
+     * Требует у плагина разрешение giveAncientChest.
+     * @throws SecurityException в случае, если требуемого разрешения нет.
+     */
+    public void addRandomChestSecured() throws SecurityException;
+    
+    /**
+     * Выдает случайный сундук игроку.
+     * Требует у плагина разрешение giveAncientChest.
+     * В случае отсутствия разрешения, ничего не происходит.
+     */
+    public void addRandomChest();
+    
+    /**
+     * Изменить количество золота у игрока.
+     * Требует у плагина разрешение changeGold.
+     * @param amount величина, на которую необходимо изменить золото.
+     * @throws SecurityException в случае, если требуемого разрешения нет.
+     */
+    public void changeGoldSecured(int amount) throws SecurityException;
+    
+    /**
+     * Изменить количество золота у игрока.
+     * Требует у плагина разрешение changeGold.
+     * В случае отсутствия разрешения, ничего не происходит.
+     * @param amount величина, на которую необходимо изменить золото.
+     */
+    public void changeGold(int amount);
+    
+    /**
+     * Добавить опыт игроку.
+     * Требует у плагина разрешение changeExperience.
+     * @param amount количество добавляемого опыта (не может быть отрицательным).
+     * @throws SecurityException в случае, если требуемого разрешения нет.
+     */
+    public void addExperienceSecured(int amount) throws SecurityException;
+    
+    /**
+     * Добавить опыт игроку.
+     * Требует у плагина разрешение changeExperience.
+     * В случае отсутствия разрешения, ничего не происходит.
+     * @param amount количество добавляемого опыта (не может быть отрицательным).
+     */
+    public void addExperience(int amount);
+    
+    /**
+     * Добавить игроку достижение с указанным названием.
+     * Требует у плагина разрешение addAchievement_%категория достижений% (например, addAchievement_ANNIHILATION).
+     * @param achievementName название достижения (не видимое, а техническое).
+     * @throws SecurityException в случае, если требуемого разрешения нет.
+     */
+    public void addAchievementSecured(String achievementName) throws SecurityException;
+    
+    /**
+     * Добавить игроку достижение с указанным названием.
+     * Требует у плагина разрешение addAchievement_%категория достижений% (например, addAchievement_ANNIHILATION).
+     * В случае отсутствия разрешения, ничего не происходит.
+     * @param achievementName название достижения (не видимое, а техническое).
+     */
+    public void addAchievement(String achievementName);
     
 }
