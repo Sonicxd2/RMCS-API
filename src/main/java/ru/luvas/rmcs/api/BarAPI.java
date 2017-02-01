@@ -7,11 +7,11 @@ import org.bukkit.entity.Player;
  *
  * @author 0xC0deBabe
  */
-public interface BarAPI {
+ public interface BarAPI {
 
-    public final static float DEFAULT_WIDTH = 0.33f;
+    float DEFAULT_WIDTH = 0.33f;
 
-    public final static int WAITING_R = 250, WAITING_G = 250, WAITING_B = 100;
+    int WAITING_R = 250, WAITING_G = 250, WAITING_B = 100;
 
     /**
      * Отправить конкретному игроку вечный прогресс-бар стандартной ширины.
@@ -21,7 +21,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      */
-    public void send(Player p, String text, int r, int g, int b);
+    void send(Player p, String text, int r, int g, int b);
 
     /**
      * Отправить конкретному игроку прогресс-бар, который просуществует seconds секунд.
@@ -32,7 +32,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
      */
-    public void send(Player p, String text, int r, int g, int b, int seconds);
+     void send(Player p, String text, int r, int g, int b, int seconds);
 
     /**
      * Отправить конкретному игроку вечный прогресс-бар заданной ширины.
@@ -43,7 +43,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Player p, String text, int r, int g, int b, float width);
+     void send(Player p, String text, int r, int g, int b, float width);
 
     /**
      * Отправить конкретному игроку прогресс-бар, который просуществует seconds секунд, заданной ширины.
@@ -55,7 +55,7 @@ public interface BarAPI {
      * @param seconds время существования прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Player p, String text, int r, int g, int b, int seconds, float width);
+     void send(Player p, String text, int r, int g, int b, int seconds, float width);
 
     /**
      * Отправить конкретному игроку прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -68,7 +68,7 @@ public interface BarAPI {
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      */
-    public void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
+     void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
 
     /**
      * Отправить конкретному игроку прогресс-бар с заданным прогрессом и заданной ширины.
@@ -83,7 +83,7 @@ public interface BarAPI {
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
-    public void send(Player p, String text, int r, int g, int b, float progress, float width);
+     void send(Player p, String text, int r, int g, int b, float progress, float width);
 
     /**
      * Отправить конкретному игроку прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -97,7 +97,7 @@ public interface BarAPI {
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
+     void send(Player p, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 
     /**
      * Отправить всем игрокам указанной коллекции вечный прогресс-бар стандартной ширины.
@@ -107,7 +107,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b);
+     void send(Collection<Player> players, String text, int r, int g, int b);
 
     /**
      * Отправить всем игрокам заданной коллекции прогресс-бар, который просуществует seconds секунд.
@@ -118,7 +118,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b, int seconds);
+     void send(Collection<Player> players, String text, int r, int g, int b, int seconds);
 
     /**
      * Отправить всем игрокам заданной коллекции вечный прогресс-бар заданной ширины.
@@ -129,7 +129,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b, float width);
+     void send(Collection<Player> players, String text, int r, int g, int b, float width);
 
     /**
      * Отправить всем игрокам заданной коллекции прогресс-бар, который просуществует seconds секунд, заданной ширины.
@@ -141,7 +141,7 @@ public interface BarAPI {
      * @param seconds время существования прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, float width);
+     void send(Collection<Player> players, String text, int r, int g, int b, int seconds, float width);
 
     /**
      * Отправить всем игрокам заданной коллекции прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -154,7 +154,7 @@ public interface BarAPI {
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
+     void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
 
     /**
      * Отправить всем игрокам заданной коллекции прогресс-бар с заданным прогрессом и заданной ширины.
@@ -169,7 +169,7 @@ public interface BarAPI {
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
-    public void send(Collection<Player> players, String text, int r, int g, int b, float progress, float width);
+     void send(Collection<Player> players, String text, int r, int g, int b, float progress, float width);
 
     /**
      * Отправить всем игрокам заданной коллекции прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -183,7 +183,7 @@ public interface BarAPI {
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
+     void send(Collection<Player> players, String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 
     /**
      * Отправить всем игрокам вечный прогресс-бар стандартной ширины.
@@ -192,7 +192,7 @@ public interface BarAPI {
      * @param g зеленая составляющая цвета.
      * @param b синяя составляющая цвета.
      */
-    public void broadcast(String text, int r, int g, int b);
+     void broadcast(String text, int r, int g, int b);
 
     /**
      * Отправить всем игрокам прогресс-бар, который просуществует seconds секунд.
@@ -202,7 +202,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param seconds время существования прогресс-бара.
      */
-    public void broadcast(String text, int r, int g, int b, int seconds);
+     void broadcast(String text, int r, int g, int b, int seconds);
 
     /**
      * Отправить всем игрокам вечный прогресс-бар заданной ширины.
@@ -212,7 +212,7 @@ public interface BarAPI {
      * @param b синяя составляющая цвета.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void broadcast(String text, int r, int g, int b, float width);
+     void broadcast(String text, int r, int g, int b, float width);
 
     /**
      * Отправить всем игрокам прогресс-бар, который просуществует seconds секунд, заданной ширины.
@@ -223,7 +223,7 @@ public interface BarAPI {
      * @param seconds время существования прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void broadcast(String text, int r, int g, int b, int seconds, float width);
+     void broadcast(String text, int r, int g, int b, int seconds, float width);
 
     /**
      * Отправить всем игрокам прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -235,7 +235,7 @@ public interface BarAPI {
      * @param seconds полное время существования прогресс-бара.
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      */
-    public void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
+     void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo);
 
     /**
      * Отправить всем игрокам прогресс-бар с заданным прогрессом и заданной ширины.
@@ -249,7 +249,7 @@ public interface BarAPI {
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
     @Deprecated
-    public void broadcast(String text, int r, int g, int b, float progress, float width);
+     void broadcast(String text, int r, int g, int b, float progress, float width);
 
     /**
      * Отправить всем игрокам прогресс-бар, который просуществует seconds-launchedSecondsAgo секунд,
@@ -262,17 +262,17 @@ public interface BarAPI {
      * @param launchedSecondsAgo сколько секунд назад начался отсчет времени для данного прогресс-бара.
      * @param width ширина прогресс-бара (в процентном соотношении от ширины экрана, значение - от 0 до 1).
      */
-    public void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
+     void broadcast(String text, int r, int g, int b, int seconds, int launchedSecondsAgo, float width);
 
     /**
      * Убрать прогресс-бар для конкретного игрока.
      * @param p игрок.
      */
-    public void clear(Player p);
+     void clear(Player p);
 
     /**
      * Убрать прогресс-бар для всех игроков.
      */
-    public void clearForAll();
+     void clearForAll();
 
 }

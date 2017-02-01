@@ -13,13 +13,13 @@ public interface RMCSPlayerManager {
      * @param name ник игрока.
      * @return RMCS-игрока с данным ником или null, если он не в сети.
      */
-    public RMCSPlayer getPlayer(String name);
+    RMCSPlayer getPlayer(String name);
     
     /**
      * Получить класс RMCSPlayer по объекту игрока.
      * @param player объект игрока.
      * @return RMCS-игрока с ником, как у переданного, или null, если переданный игрок не в сети.
      */
-    public RMCSPlayer getPlayer(Player player);
+    RMCSPlayer getPlayer(Player player);
     
 }

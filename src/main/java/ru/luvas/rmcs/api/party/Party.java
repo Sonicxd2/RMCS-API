@@ -123,9 +123,7 @@ public final class Party {
      * @return true, если состоит, и false иначе.
      */
     public boolean isInParty(String player) {
-        if(leader.getNickname().equalsIgnoreCase(player))
-            return true;
-        return this.members.stream().map(PartyMember::getNickname).anyMatch(p -> p.equalsIgnoreCase(player));
+        return isLeader(player) || isMember(player);
     }
 
     /**

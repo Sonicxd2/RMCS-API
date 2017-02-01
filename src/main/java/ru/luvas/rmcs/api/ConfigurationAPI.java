@@ -15,20 +15,20 @@ public interface ConfigurationAPI {
      * @param name название файла конфигурации (без .yml).
      * @return файл конфигурации.
      */
-    public FileConfiguration getConfig(JavaPlugin plugin, String name);
+    FileConfiguration getConfig(JavaPlugin plugin, String name);
     
     /**
      * Сохранить файл конфигурации определенного плагина с заданным именем.
      * @param plugin плагин.
      * @param name название файла конфигурации (без .yml).
      */
-    public void saveConfig(JavaPlugin plugin, String name);
+    void saveConfig(JavaPlugin plugin, String name);
     
     /**
      * Перезагрузить файл конфигурации определенного плагина с заданным именем.
      * @param plugin плагин.
      * @param name название файла конфигурации (без .yml).
      */
-    public void reloadConfig(JavaPlugin plugin, String name);
+    void reloadConfig(JavaPlugin plugin, String name);
     
 }

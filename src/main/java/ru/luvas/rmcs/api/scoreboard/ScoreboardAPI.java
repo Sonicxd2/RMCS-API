@@ -6,39 +6,39 @@ import org.bukkit.entity.Player;
  *
  * @author 0xC0deBabe
  */
-public interface ScoreboardAPI {
+ public interface ScoreboardAPI {
     
     /**
      * Обнуляет все скорборды сервера и подготавливает к работе ScoreboardAPI.
      * Нужно использовать единожды, после загрузки сервера.
      */
-    public void prepare();
+     void prepare();
     
     /**
      * Очищает кеш, связанный с указанным игроком. Не нужно вызывать после prepare().
      * @param p игрок.
      */
-    public void invalidate(Player p);
+     void invalidate(Player p);
 
     /**
      * Изменить название скорборда.
      * @param name новое название скорборда.
      */
-    public void setDisplayName(String name);
+     void setDisplayName(String name);
     
     /**
      * Изменить название скорборда на анимированное.
      * @param name новое название скорборда.
      * @param gamma цветовая гамма для анимации.
      */
-    public void setDisplayName(String name, AnimationGamma gamma);
+     void setDisplayName(String name, AnimationGamma gamma);
     
     /**
      * Добавить новую строчку, видимую всем, в скорборд с указанным номером и текстом.
      * @param id номер строки (score).
      * @param name текст строки.
      */
-    public void addGlobalScore(int id, String name);
+     void addGlobalScore(int id, String name);
     
     /**
      * Добавить новую строчку, видимую всем, в скорборд с указанным номером и отформатированным текстом (String.format).
@@ -46,20 +46,20 @@ public interface ScoreboardAPI {
      * @param name текст строки.
      * @param args аргументы для форматирования текста.
      */
-    public void addGlobalScore(int id, String name, Object... args);
+     void addGlobalScore(int id, String name, Object... args);
     
     /**
      * Удалить видимые всем строчки из скорборда с указанным номером строки.
      * @param id номер строки (score).
      */
-    public void removeGlobalScores(int id);
+     void removeGlobalScores(int id);
     
     /**
      * Удалить видимую всем строчку из скорборда с указанным номером строки и текстом.
      * @param id номер строки (score).
      * @param name текст строки.
      */
-    public void removeGlobalScore(int id, String name);
+     void removeGlobalScore(int id, String name);
     
     /**
      * Удалить видимую всем строчку из скорборда с указанным номером строки и отформатированным текстом.
@@ -67,7 +67,7 @@ public interface ScoreboardAPI {
      * @param name текст строки.
      * @param args аргументы для форматирования текста.
      */
-    public void removeGlobalScore(int id, String name, Object... args);
+     void removeGlobalScore(int id, String name, Object... args);
     
     /**
      * Добавить новую строчку в скорборд, которая будет видна лишь одному игроку.
@@ -76,7 +76,7 @@ public interface ScoreboardAPI {
      * @param id номер строки (score).
      * @param name текст строки.
      */
-    public void addScore(Player p, int id, String name);
+     void addScore(Player p, int id, String name);
     
     /**
      * Добавить новую отформатированную строчку в скорборд, которая будет видна лишь одному игроку.
@@ -86,14 +86,14 @@ public interface ScoreboardAPI {
      * @param name текст строки.
      * @param args аргументы для форматирования текста.
      */
-    public void addScore(Player p, int id, String name, Object... args);
+     void addScore(Player p, int id, String name, Object... args);
     
     /**
      * Удалить видимую определенному игроку строчку из скорборда с указанным номером.
      * @param p игрок.
      * @param id номер строки (score).
      */
-    public void removeScore(Player p, int id);
+     void removeScore(Player p, int id);
     
     /**
      * Обновляет текст строчки, видимой определенному игроку, у которой переданный номер строки, на новый.
@@ -101,7 +101,7 @@ public interface ScoreboardAPI {
      * @param id номер строки (score).
      * @param name новый текст строки.
      */
-    public void updateScore(Player p, int id, String name);
+     void updateScore(Player p, int id, String name);
     
     /**
      * Обновляет текст строчки, видимой определенному игроку, у которой переданный номер строки, на новый отформатированный.
@@ -110,6 +110,6 @@ public interface ScoreboardAPI {
      * @param name новый текст строки.
      * @param args аргументы для форматирования нового текста строки.
      */
-    public void updateScore(Player p, int id, String name, Object... args);
+     void updateScore(Player p, int id, String name, Object... args);
     
 }

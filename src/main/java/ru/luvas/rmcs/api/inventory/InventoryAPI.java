@@ -14,7 +14,7 @@ public interface InventoryAPI {
      * @param sizeInLines размер инвентаря в линиях (например, 4 соответствует 36-слотовому инвентарю).
      * @return созданный инвентарь.
      */
-    public DynamicInventory createNewInventory(String name, int sizeInLines);
+    DynamicInventory createNewInventory(String name, int sizeInLines);
     
     /**
      * Открывает переданный инвентарь указанному игроку. Метод не отличается от DynamicInventory.open.
@@ -22,6 +22,6 @@ public interface InventoryAPI {
      * @param inventory инвентарь.
      * @return переданный инвентарь.
      */
-    public DynamicInventory open(Player p, DynamicInventory inventory);
+    DynamicInventory open(Player p, DynamicInventory inventory);
     
 }

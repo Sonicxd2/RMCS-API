@@ -13,11 +13,11 @@ public interface QueueAPI {
      * @param players максимальное количество игроков, которые могут участвовать в игре.
      * @param queues имена очередей, вход в которые может привести к попаданию на этот сервер.
      */
-    public void waitForPlayers(int players, String... queues);
+    void waitForPlayers(int players, String... queues);
     
     /**
      * Функция, сигнализирующая о том, что сервер больше не ожидает игроков (используется при начале игры).
      */
-    public void stopWaitingForPlayers();
+    void stopWaitingForPlayers();
     
 }
