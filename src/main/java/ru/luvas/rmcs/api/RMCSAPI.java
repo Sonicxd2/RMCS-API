@@ -2,6 +2,7 @@ package ru.luvas.rmcs.api;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.luvas.rmcs.api.inventory.InventoryAPI;
+import ru.luvas.rmcs.api.kits.KitAPI;
 import ru.luvas.rmcs.api.party.PartyAPI;
 import ru.luvas.rmcs.api.player.RMCSPlayerManager;
 import ru.luvas.rmcs.api.scoreboard.ScoreboardAPI;
@@ -34,6 +35,8 @@ public class RMCSAPI extends JavaPlugin {
     private static SqlManager sqlManager;
     
     private static BungeeAPI bungeeAPI;
+
+    private static KitAPI kitAPI;
     
     /**
      * Проверка, инициализировано ли API.
@@ -45,7 +48,7 @@ public class RMCSAPI extends JavaPlugin {
     
     /**
      * Получение BarAPI, с помощью которого можно работать с прогресс-барами.
-     * @return реализацию класса BarAPI.
+     * @return реализацию интерфейса BarAPI.
      */
     public static BarAPI getBarAPI() {
         if(!isLoaded())
@@ -55,7 +58,7 @@ public class RMCSAPI extends JavaPlugin {
     
     /**
      * Получение TitleAPI, с помощью которого можно работать с тайтлами и табом.
-     * @return реализацию класса TitleAPI.
+     * @return реализацию интерфейса TitleAPI.
      */
     public static TitleAPI getTitleAPI() {
         if(!isLoaded())
@@ -66,7 +69,7 @@ public class RMCSAPI extends JavaPlugin {
     /**
      * Получение менеджера игроков, с помощью которого можно получить для конкретного игрока класс
      * RMCSPlayer, содержащий полезную информацию о данном игроке и методы для работы с ней.
-     * @return реализацию класса RMCSPlayerManager.
+     * @return реализацию интерфейса RMCSPlayerManager.
      */
     public static RMCSPlayerManager getPlayerManager() {
         if(!isLoaded())
@@ -76,7 +79,7 @@ public class RMCSAPI extends JavaPlugin {
     
     /**
      * Получение QueueAPI, с помощью которого можно работать с очередями (добавлять/удалять из них сервер).
-     * @return реализацию класса QueueAPI.
+     * @return реализацию интерфейса QueueAPI.
      */
     public static QueueAPI getQueueAPI() {
         if(!isLoaded())
@@ -86,7 +89,7 @@ public class RMCSAPI extends JavaPlugin {
     
     /**
      * Получение PartyAPI, с помощью которого можно работать с группами.
-     * @return реализацию класса PartyAPI.
+     * @return реализацию интерфейса PartyAPI.
      */
     public static PartyAPI getPartyAPI() {
         if(!isLoaded())
@@ -97,7 +100,7 @@ public class RMCSAPI extends JavaPlugin {
     /**
      * Получение ScoreboardAPI, с помощью которого можно создавать
      * ненагрущающие скорборды, работающие на пакетах, для игроков.
-     * @return реализацию класса ScoreboardAPI.
+     * @return реализацию интерфейса ScoreboardAPI.
      */
     public static ScoreboardAPI getScoreboardAPI() {
         if(!isLoaded())
@@ -108,7 +111,7 @@ public class RMCSAPI extends JavaPlugin {
     /**
      * Получение InventoryAPI, с помощью которого можно создавать инвентари
      * с кликабельными слотами.
-     * @return реализацию класса InventoryAPI.
+     * @return реализацию интерфейса InventoryAPI.
      */
     public static InventoryAPI getInventoryAPI() {
         if(!isLoaded())
@@ -118,7 +121,7 @@ public class RMCSAPI extends JavaPlugin {
     
     /**
      * Получение ConfigurationAPI, которое упрощает работу с файлами конфигурации.
-     * @return реализацию класса ConfigurationAPI.
+     * @return реализацию интерфейса ConfigurationAPI.
      */
     public static ConfigurationAPI getConfigurationAPI() {
         if(!isLoaded())
@@ -129,7 +132,7 @@ public class RMCSAPI extends JavaPlugin {
     /**
      * Получение SqlManager, через который можно получить SqlConnector для
      * работы с базой данных.
-     * @return реализацию класса SqlManager.
+     * @return реализацию интерфейса SqlManager.
      */
     public static SqlManager getSqlManager() {
         if(!isLoaded())
@@ -141,12 +144,23 @@ public class RMCSAPI extends JavaPlugin {
      * Получение BungeeAPI, с помощью которого можно узнать bungee-информацию
      * о данном сервере, о лобби-сервере данного режима, а также перебросить
      * игроков с данного сервера в лобби.
-     * @return реализацию класса BungeeAPI.
+     * @return реализацию интерфейса BungeeAPI.
      */
     public static BungeeAPI getBungeeAPI() {
         if(!isLoaded())
             throw new ApiNotLoadedException();
         return bungeeAPI;
+    }
+
+    /**
+     * Получение KitAPI, с помощью которого можно получать различного рода
+     * информацию по наборам, доступным игрокам по команде /kit.
+     * @return реализацию интерфейса KitAPI.
+     */
+    public static KitAPI getKitAPI() {
+        if(!isLoaded())
+            throw new ApiNotLoadedException();
+        return kitAPI;
     }
     
 }
