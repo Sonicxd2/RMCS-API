@@ -6,6 +6,7 @@ ru/luvas/rmcs/api/ConfigurationAPI.class
 ru/luvas/rmcs/api/TitleAPI.class
 ru/luvas/rmcs/api/kits/KitItem.class
 ru/luvas/rmcs/api/inventory/InventoryAPI.class
+ru/luvas/rmcs/api/DmsMaterials.class
 ru/luvas/rmcs/api/kits/Kit.class
 ru/luvas/rmcs/api/party/PartyAPI.class
 ru/luvas/rmcs/api/inventory/DynamicInventory.class
