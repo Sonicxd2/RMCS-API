@@ -37,6 +37,8 @@ public class RMCSAPI extends JavaPlugin {
     private static BungeeAPI bungeeAPI;
 
     private static KitAPI kitAPI;
+
+    private static CommandsAPI commandsAPI;
     
     /**
      * Проверка, инициализировано ли API.
@@ -161,6 +163,17 @@ public class RMCSAPI extends JavaPlugin {
         if(!isLoaded())
             throw new ApiNotLoadedException();
         return kitAPI;
+    }
+
+    /**
+     * Получение CommandsAPI, с помощью которого можно регистрировать
+     * новые команды (без добавления в plugin.yml).
+     * @return реализацию интерфейса CommandsAPI.
+     */
+    public static CommandsAPI getCommandsAPI() {
+        if(!isLoaded())
+            throw new ApiNotLoadedException();
+        return commandsAPI;
     }
     
 }
