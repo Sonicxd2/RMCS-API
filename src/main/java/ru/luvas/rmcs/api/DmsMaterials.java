@@ -54,6 +54,14 @@ public class DmsMaterials {
         SATCHEL,
         SEVERED_EAR,
         HUMAN_SKULL,
+        MAGIC_PHIAL,
+        MAGIC_PHIAL2,
+        BLOOD_SHARD,
+        BLUE_DUST,
+        PULSATORY_CRYSTAL,
+        PURPLE_POWDER,
+        BLUE_EYE,
+        CROSS_RUNE,
 
     //CustomNPC weapons section
         BROKEN_BOTTLE,
