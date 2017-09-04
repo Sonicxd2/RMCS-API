@@ -6,7 +6,9 @@ import ru.luvas.rmcs.api.kits.KitAPI;
 import ru.luvas.rmcs.api.party.PartyAPI;
 import ru.luvas.rmcs.api.player.RMCSPlayerManager;
 import ru.luvas.rmcs.api.scoreboard.ScoreboardAPI;
+import ru.luvas.rmcs.api.scoreboard.SideBoardAPI;
 import ru.luvas.rmcs.api.sql.SqlManager;
+import ru.luvas.rmcs.api.table.TableAPI;
 
 /**
  *
@@ -39,6 +41,10 @@ public class RMCSAPI extends JavaPlugin {
     private static KitAPI kitAPI;
 
     private static CommandsAPI commandsAPI;
+
+    private static SideBoardAPI sideBoardAPI;
+
+    private static TableAPI tableAPI;
     
     /**
      * Проверка, инициализировано ли API.
@@ -174,6 +180,28 @@ public class RMCSAPI extends JavaPlugin {
         if(!isLoaded())
             throw new ApiNotLoadedException();
         return commandsAPI;
+    }
+
+    /**
+     * Получение SideBoardAPI, с помощью которого можно работать с
+     * альтернативой скорбордов - сайдбордами.
+     * @return реализацию интерфейса SideBoardAPI.
+     */
+    public static SideBoardAPI getSideBoardAPI() {
+        if(!isLoaded())
+            throw new ApiNotLoadedException();
+        return sideBoardAPI;
+    }
+
+    /**
+     * Получение TableAPI, с помощью которого можно работать с
+     * двумерно-проецируемыми таблицами.
+     * @return реализацию интерфейса TableAPI.
+     */
+    public static TableAPI getTableAPI() {
+        if(!isLoaded())
+            throw new ApiNotLoadedException();
+        return tableAPI;
     }
     
 }

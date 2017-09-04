@@ -1,6 +1,8 @@
+/Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/table/TableAPI.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/inventory/ClickAction.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/party/PartyMember.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/ConfigurationAPI.java
+/Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/table/Column.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/example/InventoryExample.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/kits/KitItem.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/kits/KitItemStack.java
@@ -9,10 +11,13 @@
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/RMCSAPI.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/util/AutoListener.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/QueueAPI.java
+/Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/example/TableExample.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/scoreboard/AnimationGamma.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/ApiNotLoadedException.java
+/Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/table/Table.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/CommandsAPI.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/DmsMaterials.java
+/Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/scoreboard/SideBoardAPI.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/util/PlayerPredicate.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/inventory/InventoryAPI.java
 /Users/RinesThaix/Desktop/Coding/DMS_IDEA/Core/RMCS-API/src/main/java/ru/luvas/rmcs/api/inventory/DynamicInventory.java
