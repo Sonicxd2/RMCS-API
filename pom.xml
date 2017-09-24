@@ -6,6 +6,14 @@
     <description>RMCS-based API for third-party developers</description>
     <name>RMCS-API</name>
     <version>1.0.3.0</version>
+    
+    <distributionManagement>
+        <repository>
+            <id>sonics-repo</id>
+            <url>ftp://repo.sonicxd2.ru/public</url>
+        </repository>
+    </distributionManagement>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainclass>ru.luvas.rmcs.api.RMCSAPI</project.mainclass>
@@ -89,6 +97,15 @@
                 </executions>
             </plugin>
         </plugins>
+        
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+    
     </build>
 
     <repositories>
